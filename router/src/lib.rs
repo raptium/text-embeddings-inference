@@ -52,6 +52,7 @@ pub async fn run(
     max_batch_requests: Option<usize>,
     max_client_batch_size: usize,
     auto_truncate: bool,
+    hf_endpoint: Option<String>,
     hf_api_token: Option<String>,
     hostname: Option<String>,
     port: u16,
@@ -70,6 +71,10 @@ pub async fn run(
         let mut builder = ApiBuilder::new()
             .with_progress(false)
             .with_token(hf_api_token);
+
+        if let Some(endpoint) = hf_endpoint {
+            builder = builder.with_endpoint(endpoint);
+        }
 
         if let Some(cache_dir) = huggingface_hub_cache {
             builder = builder.with_cache_dir(cache_dir.into());

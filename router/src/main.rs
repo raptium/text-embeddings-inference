@@ -79,6 +79,11 @@ struct Args {
     #[clap(long, env)]
     auto_truncate: bool,
 
+    /// HuggingFace Hub endpoint
+    #[clap(long, env)]
+    #[redact(partial)]
+    hf_endpoint: Option<String>,
+
     /// Your HuggingFace hub token
     #[clap(long, env)]
     #[redact(partial)]
@@ -150,6 +155,7 @@ async fn main() -> Result<()> {
         args.max_batch_requests,
         args.max_client_batch_size,
         args.auto_truncate,
+        args.hf_endpoint,
         args.hf_api_token,
         Some(args.hostname),
         args.port,

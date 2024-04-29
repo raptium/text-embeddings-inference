@@ -22,7 +22,7 @@ candle = { git = "https://github.com/OlivierDehaene/candle", rev = "33b7ecf9ed82
 candle-nn = { git = "https://github.com/OlivierDehaene/candle", rev = "33b7ecf9ed82bb7c20f1a94555218fabfbaa2fe3", package = "candle-nn" }
 candle-transformers = { git = "https://github.com/OlivierDehaene/candle", rev = "33b7ecf9ed82bb7c20f1a94555218fabfbaa2fe3", package = "candle-transformers" }
 candle-flash-attn = { git = "https://github.com/OlivierDehaene/candle", rev = "33b7ecf9ed82bb7c20f1a94555218fabfbaa2fe3", package = "candle-flash-attn" }
-hf-hub = { git = "https://github.com/huggingface/hf-hub", rev = "b167f69692be5f49eb8003788f7f8a499a98b096" }
+hf-hub = { git = "https://github.com/raptium/hf-hub", rev = "5eb1d89f1abd92f71a280e48576b887785d2fb53" }
 
 
 [profile.release]
